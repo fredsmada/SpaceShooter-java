@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javafx.scene.text.Font;
@@ -40,12 +41,12 @@ public class Game extends Application {
     int totalScore = 0;
     
     //Creating an image 
-    Image image = new Image(new FileInputStream("/Users/jasonadams/eclipse-workspace/SpaceShooter/src/Spaceship.png"));  
+    Image image = new Image(new FileInputStream("C:/Users/Adams/Downloads/SpaceShooter-java-main/SpaceShooter/src/Spaceship.png"));  
     
     //Setting the image view 
     ImageView spaceship = new ImageView(image); 
-    Image smallEnemyShipImage = new Image(new FileInputStream("/Users/jasonadams/eclipse-workspace/SpaceShooter/src/smallEnemyShip.png")); 
-    Image laserImage = new Image(new FileInputStream("/Users/jasonadams/eclipse-workspace/SpaceShooter/src/Laser.png"));    
+    Image smallEnemyShipImage = new Image(new FileInputStream("C:/Users/Adams/Downloads/SpaceShooter-java-main/SpaceShooter/src/smallEnemyShip.png")); 
+    Image laserImage = new Image(new FileInputStream("C:/Users/Adams/Downloads/SpaceShooter-java-main/SpaceShooter/src/Laser.png"));    
     
     //Add text for wave completed
     Text finishText = new Text();
@@ -78,129 +79,135 @@ public class Game extends Application {
     //Create enemy ships
     ImageView smallEnemyShip1 = new ImageView(smallEnemyShipImage);
     smallEnemyShip1.setX(400);
-    smallEnemyShip1.setY(-25);
-    smallEnemyShip1.setFitWidth(25);
-    smallEnemyShip1.setFitHeight(25);
+    smallEnemyShip1.setY(-35);
+    smallEnemyShip1.setFitWidth(35);
+    smallEnemyShip1.setFitHeight(35);
     
     ImageView smallEnemyShip2 = new ImageView(smallEnemyShipImage);
     smallEnemyShip2.setX(400);
-    smallEnemyShip2.setY(-25);
-    smallEnemyShip2.setFitWidth(25);
-    smallEnemyShip2.setFitHeight(25);
+    smallEnemyShip2.setY(-35);
+    smallEnemyShip2.setFitWidth(35);
+    smallEnemyShip2.setFitHeight(35);
     
     ImageView smallEnemyShip3 = new ImageView(smallEnemyShipImage);
     smallEnemyShip3.setX(400);
-    smallEnemyShip3.setY(-25);
-    smallEnemyShip3.setFitWidth(25);
-    smallEnemyShip3.setFitHeight(25);
+    smallEnemyShip3.setY(-35);
+    smallEnemyShip3.setFitWidth(35);
+    smallEnemyShip3.setFitHeight(35);
     
     ImageView smallEnemyShip4 = new ImageView(smallEnemyShipImage);
     smallEnemyShip4.setX(400);
-    smallEnemyShip4.setY(-25);
-    smallEnemyShip4.setFitWidth(25);
-    smallEnemyShip4.setFitHeight(25);
+    smallEnemyShip4.setY(-35);
+    smallEnemyShip4.setFitWidth(35);
+    smallEnemyShip4.setFitHeight(35);
     
     ImageView smallEnemyShip5 = new ImageView(smallEnemyShipImage);
     smallEnemyShip5.setX(400);
-    smallEnemyShip5.setY(-25);
-    smallEnemyShip5.setFitWidth(25);
-    smallEnemyShip5.setFitHeight(25);
+    smallEnemyShip5.setY(-35);
+    smallEnemyShip5.setFitWidth(35);
+    smallEnemyShip5.setFitHeight(35);
     
     ImageView smallEnemyShip6 = new ImageView(smallEnemyShipImage);
     smallEnemyShip6.setX(400);
-    smallEnemyShip6.setY(-25);
-    smallEnemyShip6.setFitWidth(25);
-    smallEnemyShip6.setFitHeight(25);
+    smallEnemyShip6.setY(-35);
+    smallEnemyShip6.setFitWidth(35);
+    smallEnemyShip6.setFitHeight(35);
     
     ImageView smallEnemyShip7 = new ImageView(smallEnemyShipImage);
     smallEnemyShip7.setX(400);
-    smallEnemyShip7.setY(-25);
-    smallEnemyShip7.setFitWidth(25);
-    smallEnemyShip7.setFitHeight(25);
+    smallEnemyShip7.setY(-35);
+    smallEnemyShip7.setFitWidth(35);
+    smallEnemyShip7.setFitHeight(35);
     
     ImageView smallEnemyShip8 = new ImageView(smallEnemyShipImage);
     smallEnemyShip8.setX(400);
-    smallEnemyShip8.setY(-25);
-    smallEnemyShip8.setFitWidth(25);
-    smallEnemyShip8.setFitHeight(25);
+    smallEnemyShip8.setY(-35);
+    smallEnemyShip8.setFitWidth(35);
+    smallEnemyShip8.setFitHeight(35);
     
     ImageView smallEnemyShip9 = new ImageView(smallEnemyShipImage);
     smallEnemyShip9.setX(400);
-    smallEnemyShip9.setY(-25);
-    smallEnemyShip9.setFitWidth(25);
-    smallEnemyShip9.setFitHeight(25);
+    smallEnemyShip9.setY(-35);
+    smallEnemyShip9.setFitWidth(35);
+    smallEnemyShip9.setFitHeight(35);
     
     ImageView smallEnemyShip10 = new ImageView(smallEnemyShipImage);
     smallEnemyShip10.setX(400);
-    smallEnemyShip10.setY(-25);
-    smallEnemyShip10.setFitWidth(25);
-    smallEnemyShip10.setFitHeight(25);
+    smallEnemyShip10.setY(-35);
+    smallEnemyShip10.setFitWidth(35);
+    smallEnemyShip10.setFitHeight(35);
     
     //Create enemy ship hitboxes
-    Rectangle smallEnemyShipHitBox1 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox1 =new Rectangle(35,35);
     smallEnemyShipHitBox1.setX(300);
     smallEnemyShipHitBox1.setY(800);
     smallEnemyShipHitBox1.setOpacity(0);
     smallEnemyShipHitBox1.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox2 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox2 = new Rectangle(35,35);
     smallEnemyShipHitBox2.setX(300);
     smallEnemyShipHitBox2.setY(800);
     smallEnemyShipHitBox2.setOpacity(0);
     smallEnemyShipHitBox2.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox3 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox3 = new Rectangle(35,35);
     smallEnemyShipHitBox3.setX(300);
     smallEnemyShipHitBox3.setY(800);
     smallEnemyShipHitBox3.setOpacity(0);
     smallEnemyShipHitBox3.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox4 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox4 = new Rectangle(35,35);
     smallEnemyShipHitBox4.setX(300);
     smallEnemyShipHitBox4.setY(800);
     smallEnemyShipHitBox4.setOpacity(0);
     smallEnemyShipHitBox4.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox5 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox5 = new Rectangle(35,35);
     smallEnemyShipHitBox5.setX(300);
     smallEnemyShipHitBox5.setY(800);
     smallEnemyShipHitBox5.setOpacity(0);
     smallEnemyShipHitBox5.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox6 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox6 = new Rectangle(35,35);
     smallEnemyShipHitBox6.setX(300);
     smallEnemyShipHitBox6.setY(800);
     smallEnemyShipHitBox6.setOpacity(0);
     smallEnemyShipHitBox6.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox7 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox7 = new Rectangle(35,35);
     smallEnemyShipHitBox7.setX(300);
     smallEnemyShipHitBox7.setY(800);
     smallEnemyShipHitBox7.setOpacity(0);
     smallEnemyShipHitBox7.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox8 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox8 = new Rectangle(35,35);
     smallEnemyShipHitBox8.setX(300);
     smallEnemyShipHitBox8.setY(800);
     smallEnemyShipHitBox8.setOpacity(0);
     smallEnemyShipHitBox8.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox9 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox9 = new Rectangle(35,35);
     smallEnemyShipHitBox9.setX(300);
     smallEnemyShipHitBox9.setY(800);
     smallEnemyShipHitBox9.setOpacity(0);
     smallEnemyShipHitBox9.setFill(Color.BLACK);
     
-    Rectangle smallEnemyShipHitBox10 = new Rectangle(25,25);
+    Rectangle smallEnemyShipHitBox10 = new Rectangle(35,35);
     smallEnemyShipHitBox10.setX(300);
     smallEnemyShipHitBox10.setY(800);
     smallEnemyShipHitBox10.setOpacity(0);
     smallEnemyShipHitBox10.setFill(Color.BLACK);
     
-    //Add laser hitbox
-    Rectangle laserHitBox = new Rectangle(4, 15);
+    //Add laser hitboxes
+    Rectangle laserHitBox = new Rectangle(12, 15);
     laserHitBox.setX(100);
     laserHitBox.setY(800);
+    Rectangle laserHitBox2 = new Rectangle(12, 15);
+    laserHitBox2.setX(100);
+    laserHitBox2.setY(800);
+    Rectangle laserHitBox3 = new Rectangle(12, 15);
+    laserHitBox3.setX(100);
+    laserHitBox3.setY(800);
     
     //Transitions for enemy ships
     Circle cp1 = new Circle();
@@ -230,31 +237,31 @@ public class Game extends Application {
     cp5.setStroke(Color.BLACK);
     cp5.setFill(null);
     
-    PathTransition pt1 = new PathTransition(Duration.seconds(7.5), cp1, smallEnemyShip1);
+    PathTransition pt1 = new PathTransition(Duration.seconds(8.5), cp1, smallEnemyShip1);
     pt1.setDelay(Duration.seconds(0.5));
     pt1.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip1);
     });
     
-    PathTransition ptHitBox1 = new PathTransition(Duration.seconds(7.5), cp1, smallEnemyShipHitBox1);
+    PathTransition ptHitBox1 = new PathTransition(Duration.seconds(8.5), cp1, smallEnemyShipHitBox1);
     ptHitBox1.setDelay(Duration.seconds(0.5));
     ptHitBox1.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox1);
     });
     
-    PathTransition pt2 = new PathTransition(Duration.seconds(7.5), cp1, smallEnemyShip2);
+    PathTransition pt2 = new PathTransition(Duration.seconds(9), cp1, smallEnemyShip2);
     pt2.setDelay(Duration.seconds(1));
     pt2.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip2);
     });
     
-    PathTransition ptHitBox2 = new PathTransition(Duration.seconds(7.5), cp1, smallEnemyShipHitBox2);
+    PathTransition ptHitBox2 = new PathTransition(Duration.seconds(9), cp1, smallEnemyShipHitBox2);
     ptHitBox2.setDelay(Duration.seconds(1));
     ptHitBox2.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox2);
     });
     
-    PathTransition pt3 = new PathTransition(Duration.seconds(7), cp2, smallEnemyShip3);
+    PathTransition pt3 = new PathTransition(Duration.seconds(8), cp2, smallEnemyShip3);
     pt3.setDelay(Duration.seconds(1));
     pt3.jumpTo(Duration.seconds(8));
     pt3.setRate(-1.0);
@@ -262,7 +269,7 @@ public class Game extends Application {
     	pane.getChildren().remove(smallEnemyShip3);
     });
     
-    PathTransition ptHitBox3 = new PathTransition(Duration.seconds(7), cp2, smallEnemyShipHitBox3);
+    PathTransition ptHitBox3 = new PathTransition(Duration.seconds(8), cp2, smallEnemyShipHitBox3);
     ptHitBox3.setDelay(Duration.seconds(1));
     ptHitBox3.jumpTo(Duration.seconds(8));
     ptHitBox3.setRate(-1.0);
@@ -270,7 +277,7 @@ public class Game extends Application {
     	pane.getChildren().remove(smallEnemyShipHitBox3);
     });
     
-    PathTransition pt4 = new PathTransition(Duration.seconds(7), cp2, smallEnemyShip3);
+    PathTransition pt4 = new PathTransition(Duration.seconds(8), cp2, smallEnemyShip3);
     pt4.setDelay(Duration.seconds(3));
     pt4.jumpTo(Duration.seconds(8));
     pt4.setRate(-1.0);
@@ -278,7 +285,7 @@ public class Game extends Application {
     	pane.getChildren().remove(smallEnemyShip4);
     });
     
-    PathTransition ptHitBox4 = new PathTransition(Duration.seconds(7), cp2, smallEnemyShipHitBox3);
+    PathTransition ptHitBox4 = new PathTransition(Duration.seconds(8), cp2, smallEnemyShipHitBox3);
     ptHitBox4.setDelay(Duration.seconds(3));
     ptHitBox4.jumpTo(Duration.seconds(8));
     ptHitBox4.setRate(-1.0);
@@ -286,73 +293,73 @@ public class Game extends Application {
     	pane.getChildren().remove(smallEnemyShipHitBox4);
     });
     
-    PathTransition pt5 = new PathTransition(Duration.seconds(3), cp3, smallEnemyShip5);
+    PathTransition pt5 = new PathTransition(Duration.seconds(4), cp3, smallEnemyShip5);
     pt5.setDelay(Duration.seconds(11));
     pt5.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip5);
     });
     
-    PathTransition ptHitBox5 = new PathTransition(Duration.seconds(3), cp3, smallEnemyShipHitBox5);
+    PathTransition ptHitBox5 = new PathTransition(Duration.seconds(4), cp3, smallEnemyShipHitBox5);
     ptHitBox5.setDelay(Duration.seconds(11));
     ptHitBox5.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox5);
     });
     
-    PathTransition pt6 = new PathTransition(Duration.seconds(3), cp4, smallEnemyShip6);
+    PathTransition pt6 = new PathTransition(Duration.seconds(4), cp4, smallEnemyShip6);
     pt6.setDelay(Duration.seconds(12));
     pt6.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip6);
     });
     
-    PathTransition ptHitBox6 = new PathTransition(Duration.seconds(3), cp4, smallEnemyShipHitBox6);
+    PathTransition ptHitBox6 = new PathTransition(Duration.seconds(4), cp4, smallEnemyShipHitBox6);
     ptHitBox6.setDelay(Duration.seconds(12));
     ptHitBox6.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox6);
     });
     
-    PathTransition pt7 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShip7);
+    PathTransition pt7 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShip7);
     pt7.setDelay(Duration.seconds(15));
     pt7.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip7);
     });
     
-    PathTransition ptHitBox7 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShipHitBox7);
+    PathTransition ptHitBox7 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShipHitBox7);
     ptHitBox7.setDelay(Duration.seconds(15));
     ptHitBox7.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox7);
     });
     
-    PathTransition pt8 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShip8);
+    PathTransition pt8 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShip8);
     pt8.setDelay(Duration.seconds(16));
     pt8.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip8);
     });
     
-    PathTransition ptHitBox8 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShipHitBox8);
+    PathTransition ptHitBox8 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShipHitBox8);
     ptHitBox8.setDelay(Duration.seconds(16));
     ptHitBox8.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox8);
     });
     
-    PathTransition pt9 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShip9);
+    PathTransition pt9 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShip9);
     pt9.setDelay(Duration.seconds(17));
     pt9.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip9);
     });
     
-    PathTransition ptHitBox9 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShipHitBox9);
+    PathTransition ptHitBox9 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShipHitBox9);
     ptHitBox9.setDelay(Duration.seconds(17));
     ptHitBox9.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox9);
     });
     
-    PathTransition pt10 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShip10);
+    PathTransition pt10 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShip10);
     pt10.setDelay(Duration.seconds(18));
     pt10.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShip10);
     });
     
-    PathTransition ptHitBox10 = new PathTransition(Duration.seconds(5), cp5, smallEnemyShipHitBox10);
+    PathTransition ptHitBox10 = new PathTransition(Duration.seconds(6), cp5, smallEnemyShipHitBox10);
     ptHitBox10.setDelay(Duration.seconds(18));
     ptHitBox10.setOnFinished(evt -> {
     	pane.getChildren().remove(smallEnemyShipHitBox10);
@@ -412,9 +419,15 @@ public class Game extends Application {
     });
     
     //Set up transitions
-    TranslateTransition tt = new TranslateTransition(Duration.seconds(0.75));
-    TranslateTransition tl = new TranslateTransition(Duration.seconds(0.75));
+    TranslateTransition tt = new TranslateTransition(Duration.seconds(0.55));
+    TranslateTransition tl = new TranslateTransition(Duration.seconds(0.55));
+    TranslateTransition tt2 = new TranslateTransition(Duration.seconds(0.55));
+    TranslateTransition tl2 = new TranslateTransition(Duration.seconds(0.55));
+    TranslateTransition tt3 = new TranslateTransition(Duration.seconds(0.55));
+    TranslateTransition tl3 = new TranslateTransition(Duration.seconds(0.55));
 	ImageView laser = new ImageView(laserImage);
+//	ImageView laser2 = new ImageView(laserImage);
+//	ImageView laser3 = new ImageView(laserImage);
 	
     //Add timeline to check for collisions
     HashMap<Integer, Rectangle> enemies = new HashMap<Integer, Rectangle>();
@@ -479,53 +492,144 @@ public class Game extends Application {
     };
     timer.start();
 
+    boolean hasFired = false;
     // Listener to shoot ship laser
     borderPane.setOnMouseClicked(evt -> 
     {
-    	//Cleanup of previously fired laser
-    	pane.getChildren().remove(laser);
-    	pane.getChildren().remove(laserHitBox);
-    	tt.stop();
-    	tl.stop();
-    	
-        //Placing laser on screen
-        laser.setX(evt.getX());
-        laser.setY(575);
-        laser.setFitWidth(4);
-        laser.setFitHeight(15);
-        
-        //Placing laser hit box on screen
-        laserHitBox.setX(evt.getX());
-        laserHitBox.setY(575);
-        laserHitBox.setOpacity(0);
-        
-        //Add laser and hitbox to pane
-        pane.getChildren().add(laser);
-        pane.getChildren().add(laserHitBox);
-        
-        //Use TranslateTransition to move laser
-        tt.setFromY(0);
-        tt.setByY(-600);
-        tt.setAutoReverse(false);
-        tt.setCycleCount(1);
-        tt.setNode(laser);
-        tt.setOnFinished(event -> {
+    	if(!pane.getChildren().contains(laser) && !hasFired) {
+    		//Cleanup of previously fired laser
         	pane.getChildren().remove(laser);
-        });
-        
-        //TranslateTransition to move laser hitbox
-        tl.setFromY(0);
-        tl.setByY(-600);
-        tl.setAutoReverse(false);
-        tl.setCycleCount(1);
-        tl.setNode(laserHitBox);
-        tl.setOnFinished(event -> {
         	pane.getChildren().remove(laserHitBox);
-        });
-        
-        //Play Animations
-        tt.play();
-        tl.play();
+        	tt.stop();
+        	tl.stop();
+	        //Placing laser on screen
+	        laser.setX(evt.getX());
+	        laser.setY(575);
+	        laser.setFitWidth(10);
+	        laser.setFitHeight(15);
+	        
+	        //Placing laser hit box on screen
+	        laserHitBox.setX(evt.getX());
+	        laserHitBox.setY(575);
+	        laserHitBox.setOpacity(0);
+	        
+	        //Add laser and hitbox to pane
+	        pane.getChildren().add(laser);
+	        pane.getChildren().add(laserHitBox);
+	        
+	        //Use TranslateTransition to move laser
+	        tt.setFromY(0);
+	        tt.setByY(-600);
+	        tt.setAutoReverse(false);
+	        tt.setCycleCount(1);
+	        tt.setNode(laser);
+	        tt.setOnFinished(event -> {
+	        	pane.getChildren().remove(laser);
+	        });
+	        
+	        //TranslateTransition to move laser hitbox
+	        tl.setFromY(0);
+	        tl.setByY(-600);
+	        tl.setAutoReverse(false);
+	        tl.setCycleCount(1);
+	        tl.setNode(laserHitBox);
+	        tl.setOnFinished(event -> {
+	        	pane.getChildren().remove(laserHitBox);
+	        });
+	        
+	        //Play Animations
+	        tt.play();
+	        tl.play();
+    	}
+//    	  } else if(!pane.getChildren().contains(laser2) && !hasFired) {
+//    		//Cleanup of previously fired laser
+//          	pane.getChildren().remove(laser2);
+//          	pane.getChildren().remove(laserHitBox2);
+//          	tt2.stop();
+//          	tl2.stop();
+//    		//Placing laser on screen
+//  	        laser2.setX(evt.getX());
+//  	        laser2.setY(575);
+//  	        laser2.setFitWidth(10);
+//  	        laser2.setFitHeight(15);
+//  	        
+//  	        //Placing laser hit box on screen
+//  	        laserHitBox2.setX(evt.getX());
+//  	        laserHitBox2.setY(575);
+//  	        laserHitBox2.setOpacity(0);
+//  	        
+//  	        //Add laser and hitbox to pane
+//  	        pane.getChildren().add(laser2);
+//  	        pane.getChildren().add(laserHitBox2);
+//  	        
+//  	        //Use TranslateTransition to move laser
+//  	        tt2.setFromY(0);
+//  	        tt2.setByY(-600);
+//  	        tt2.setAutoReverse(false);
+//  	        tt2.setCycleCount(1);
+//  	        tt2.setNode(laser);
+//  	        tt2.setOnFinished(event -> {
+//  	        	pane.getChildren().remove(laser);
+//  	        });
+//  	        
+//  	        //TranslateTransition to move laser hitbox
+//  	        tl2.setFromY(0);
+//  	        tl2.setByY(-600);
+//  	        tl2.setAutoReverse(false);
+//  	        tl2.setCycleCount(1);
+//  	        tl2.setNode(laserHitBox);
+//  	        tl2.setOnFinished(event -> {
+//  	        	pane.getChildren().remove(laserHitBox);
+//  	        });
+//  	        
+//  	        //Play Animations
+//  	        tt2.play();
+//  	        tl2.play();
+//    	  } else if(!hasFired) {
+//    		//Cleanup of previously fired laser
+//          	pane.getChildren().remove(laser3);
+//          	pane.getChildren().remove(laserHitBox3);
+//          	tt3.stop();
+//          	tl3.stop();
+//    		//Placing laser on screen
+//	        laser3.setX(evt.getX());
+//	        laser3.setY(575);
+//	        laser3.setFitWidth(10);
+//	        laser3.setFitHeight(15);
+//	        
+//	        //Placing laser hit box on screen
+//	        laserHitBox3.setX(evt.getX());
+//	        laserHitBox3.setY(575);
+//	        laserHitBox3.setOpacity(0);
+//	        
+//	        //Add laser and hitbox to pane
+//	        pane.getChildren().add(laser3);
+//	        pane.getChildren().add(laserHitBox3);
+//	        
+//	        //Use TranslateTransition to move laser
+//	        tt3.setFromY(0);
+//	        tt3.setByY(-600);
+//	        tt3.setAutoReverse(false);
+//	        tt3.setCycleCount(1);
+//	        tt3.setNode(laser);
+//	        tt3.setOnFinished(event -> {
+//	        	pane.getChildren().remove(laser);
+//	        });
+//	        
+//	        //TranslateTransition to move laser hitbox
+//	        tl3.setFromY(0);
+//	        tl3.setByY(-600);
+//	        tl3.setAutoReverse(false);
+//	        tl3.setCycleCount(1);
+//	        tl3.setNode(laserHitBox);
+//	        tl3.setOnFinished(event -> {
+//	        	pane.getChildren().remove(laserHitBox);
+//	        });
+//	        
+//	        //Play Animations
+//	        tt3.play();
+//	        tl3.play();
+//    	  }
     });
     
     //Listener for pushing restart button
@@ -575,7 +679,7 @@ public class Game extends Application {
   //Method to fire enemy lasers
   public void fireEnemyLaser(double randomNumber, Pane pane) throws FileNotFoundException {
 	  //Setting up laser and hitbox
-	  Image laserImage = new Image(new FileInputStream("/Users/jasonadams/eclipse-workspace/SpaceShooter/src/Laser.png"));
+	  Image laserImage = new Image(new FileInputStream("C:/Users/Adams/Downloads/SpaceShooter-java-main/SpaceShooter/src/Laser.png"));
 	  ImageView laser = new ImageView(laserImage);
 	  laser.setX(400);
 	  laser.setY(800);
@@ -609,4 +713,4 @@ public class Game extends Application {
   public static void main(String[] args) {
     launch(args);
   }
-} 
+}
